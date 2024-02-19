@@ -1,0 +1,12 @@
+Q5. Explain ImportError. What is ModuleNotFoundError?
+ImportError is an exception in Python that is raised when an import statement fails to import a module. This exception is a subclass of the more general ImportError class. It can occur for various reasons, such as when the specified module cannot be found, there are issues with the module's content, or there are problems with the import statement itself.
+try:
+    import non_existent_module  
+except ImportError as e:
+    print(f"Import Error: {e}")
+
+Starting from Python 3.6, a more specific subclass of ImportError called ModuleNotFoundError was introduced. It is raised when the requested module is not found. While ImportError is a broader exception that can be raised for various import-related issues, ModuleNotFoundError specifically indicates that the module could not be located.
+try:
+    import non_existent_module  
+except ModuleNotFoundError as e:
+    print(f"Module Not Found Error: {e}")
